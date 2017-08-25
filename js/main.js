@@ -17,11 +17,19 @@ $(window).scroll(function() {
   else
     $('.Header-second').removeClass('top-in');
     
-  var triggerWorkPosition = $(triggerWork).offset().top + 500 - $(window).height();
+  var triggerWorkPosition = $(triggerWork).offset().top + 400 - $(window).height();
+  var triggerContactPosition = $(triggerContact).offset().top + 400 - $(window).height();
   if ($(window).scrollTop() > triggerWorkPosition) {
            // なんらかの命令を実行
            $(".Works").addClass("Works__add");
   } else {
     $(".Works").removeClass("Works__add");
+  }
+  
+  if ($(window).scrollTop() > triggerContactPosition) {
+           // なんらかの命令を実行
+           $(".Contact").addClass("Contact__add");
+  } else {
+    $(".Contact").removeClass("Contact__add");
   }
 });

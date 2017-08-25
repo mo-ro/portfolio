@@ -330,8 +330,8 @@ body {
   .Contact::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -20%;
+    left: 130%;
     width: 150%;
     height: 95%;
     margin: 3% -10% 0;
@@ -340,7 +340,13 @@ body {
     transform-origin: left center;
     -webkit-transform: rotate(-3deg);
     transform: rotate(-3deg);
-    z-index: -1; }
+    z-index: -1;
+    -webkit-transition: .5s;
+    transition: .5s; }
+  .Contact__add::before {
+    background-color: #222;
+    left: 0;
+    top: 0; }
   .Contact__block {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
