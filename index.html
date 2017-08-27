@@ -8,11 +8,10 @@
     <meta name="description">
     <meta name="keywords">
     <title>portfolio</title>
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/works.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
     <div class="Wrapper">
@@ -55,13 +54,13 @@
         </div>
       </div>
       <div class="Bottom-box">
-        <div class="Bottom-box__inner"></div>
+        <div class="Bottom-box__inner"> </div>
       </div>
       <div class="About">
         <div class="About__block">
           <div class="About__title">About</div>
           <div class="About__img"></div>
-          <div class="About__txt">かつてはサーバーサイドエンジニアを夢見てJavaの勉強をしていたものの、コンパイルエラーに悩まされる日々。いつしか心折れ、エンジニアへの道が閉ざされたその時、フロントエンドという一筋の光が...！<br>電気通信大学というバックエンドゴリゴリの大学に通いながらもフロントエンドエンジニアを目指す大学生。<br>その運命や如何に</div>
+          <div class="About__txt">かつてはサーバーサイドエンジニアを夢見てJavaの勉強をしていたものの、コンパイルエラーに悩まされる日々。いつしか心折れ、エンジニアへの道が閉ざされかけたその時、フロントエンドという一筋の光が...！<br>電気通信大学というバックエンドゴリゴリの大学に通いながらもフロントエンドエンジニアを目指す大学生。<br>その運命や如何に</div>
           <div class="About__btn"><a class="Button Button--white" href="about.html">もっと見る</a></div>
         </div>
       </div>
@@ -89,9 +88,23 @@
           <div class="Contact__btn"><a class="Button Button--black" href="#">もっと見る</a></div>
         </div>
       </div>
-    </div><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </div>
+    <nav class="Side-navigation">
+      <ul class="Side-navigation__lists">
+        <li class="Side-navigation__list"><a class="Side-navigation__link" href=".Top-box">
+            <div class="Side-navigation__circle Side-navigation__circle--top"></div></a></li>
+        <li class="Side-navigation__list"><a class="Side-navigation__link" href=".About">
+            <div class="Side-navigation__circle Side-navigation__circle--about"></div></a></li>
+        <li class="Side-navigation__list"><a class="Side-navigation__link" href=".Works">
+            <div class="Side-navigation__circle Side-navigation__circle--works"></div></a></li>
+        <li class="Side-navigation__list"><a class="Side-navigation__link" href=".Blog">
+            <div class="Side-navigation__circle Side-navigation__circle--blog"></div></a></li>
+        <li class="Side-navigation__list"><a class="Side-navigation__link" href=".Contact">
+            <div class="Side-navigation__circle Side-navigation__circle--contact"></div></a></li>
+      </ul>
+    </nav><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
-<script src="js/main.js"></script>
+<script src ="js/shards.js"></script><script src="js/main.js"></script>
   </body>
 </html>

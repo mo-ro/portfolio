@@ -1,5 +1,4 @@
 .Header {
-  position: absolute;
   height: 90px;
   width: 100%;
   background-color: #222;
@@ -14,7 +13,12 @@
       -ms-flex-align: center;
           align-items: center;
   font-family: helvetica, sans-serif;
-  z-index: 2; }
+  z-index: 2;
+  opacity: 0.9; }
+  .Header__logo-white {
+    width: 400px;
+    height: 50px;
+    margin-left: 10px; }
   .Header__title-link {
     font-size: 38px;
     font-weight: 600;
@@ -49,9 +53,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -60,7 +64,8 @@
   z-index: 1;
   -webkit-transition: .4s;
   transition: .4s;
-  font-family: helvetica, sans-serif; }
+  font-family: helvetica, sans-serif;
+  opacity: 0.9; }
 
 .top-in {
   top: 0%; }
