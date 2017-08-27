@@ -13,7 +13,7 @@ body {
 
 .Profile__block {
   width: 60%;
-  margin: 50px auto;
+  margin: 40px auto;
   display: -ms-flex;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -27,8 +27,7 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 80px; }
+          flex-direction: column; }
 
 .Profile__img {
   width: 150px;

@@ -19,10 +19,10 @@ $(function(){
   }else{
     skrollr.init();
     $(window).scroll(function() {
-      triggerWorkPosition = $(triggerWork).offset().top + 300 - $(window).height();
-      triggerContactPosition = $(triggerContact).offset().top + 300 - $(window).height();
-      triggerAboutPosition = $(triggerAbout).offset().top + 300 - $(window).height();
-      triggerBlogPosition = $(triggerBlog).offset().top + 300 - $(window).height();
+      triggerWorkPosition = $(triggerWork).offset().top + 200 - $(window).height();
+      triggerContactPosition = $(triggerContact).offset().top + 200 - $(window).height();
+      triggerAboutPosition = $(triggerAbout).offset().top + 200 - $(window).height();
+      triggerBlogPosition = $(triggerBlog).offset().top + 200 - $(window).height();
       });
   }
 
@@ -90,12 +90,12 @@ $(function(){
   
    $("body").shards(
   	[255,255,255,.01],
-	[0,119,119,.01],
+	[119,119,119,.01],
 	[0,0,0,.1],
 	5,
 	10,
 	3,
-	.05,
+	.02,
 	false
   );
 });
