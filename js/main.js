@@ -31,25 +31,25 @@ $(function(){
     if (scrl > triggerWorkPosition) {
              $(".Works").addClass("Works__add");
     } else {
-      $(".Works").removeClass("Works__add");
+      // $(".Works").removeClass("Works__add");
     }
     
     if (scrl > triggerContactPosition) {
              $(".Contact").addClass("Contact__add");
     } else {
-      $(".Contact").removeClass("Contact__add");
+      // $(".Contact").removeClass("Contact__add");
     }
     
     if (scrl > triggerAboutPosition) {
              $(".About").addClass("About__add");
     } else {
-      $(".About").removeClass("About__add");
+      // $(".About").removeClass("About__add");
     }
     
     if (scrl > triggerBlogPosition) {
              $(".Blog").addClass("Blog__add");
     } else {
-      $(".Blog").removeClass("Blog__add");
+      // $(".Blog").removeClass("Blog__add");
     }
     
     if (scrl < $(window).height() - 300) {
