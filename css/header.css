@@ -13,8 +13,7 @@
       -ms-flex-align: center;
           align-items: center;
   font-family: helvetica, sans-serif;
-  z-index: 2;
-  opacity: 0.9; }
+  z-index: 2; }
   .Header__logo-white {
     width: 400px;
     height: 50px;
@@ -61,7 +60,7 @@
           align-items: center;
   position: fixed;
   top: -100%;
-  z-index: 1;
+  z-index: 2;
   -webkit-transition: .4s;
   transition: .4s;
   font-family: helvetica, sans-serif;

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php require('./wp/myblog/wp-blog-header.php'); ?><!DOCTYPE html>
 <html>
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# undefined: http://ogp.me/ns/undefined#">
     <meta charset="UTF-8">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/works.css">
+    <link rel="stylesheet" href="css/blog.css">
   </head>
   <body>
     <div class="Header-second"><a class="Header__logo" href="index.html"><?xml version="1.0" encoding="utf-8"?>
@@ -109,7 +109,7 @@
       </div>
     </div>
     <div class="Header">
-      <div class="Header__title"><a class="Header__title-link" href="index.html" data-0="opacity: 1" data-40="opacity: 0">Works</a></div>
+      <div class="Header__title"><a class="Header__title-link" href="index.html" data-0="opacity: 1" data-40="opacity: 0">Blog</a></div>
       <div class="Header__navigation">
         <ul class="Header__lists"><a class="Header__link" href="about.html">
             <li class="Header__link-list">About</li></a><a class="Header__link" href="works.html">
@@ -117,60 +117,20 @@
             <li class="Header__link-list">Blog</li></a><a class="Header__link" href="#">
             <li class="Header__link-list">Contact</li></a></ul>
       </div>
-    </div>
-    <div class="Wrapper--works">
-      <div class="Sidemenu">
-        <ul class="Sidemenu__lists">
-          <li class="Sidemenu__list">CATEGORY</li>
-          <li class="Sidemenu__list Sidemenu__list-add">WEBSITE</li>
-          <li class="Sidemenu__list">DESIGN</li>
-          <li class="Sidemenu__list">SYSTEM</li>
-        </ul>
-      </div>
-      <div class="Main">
-        <ul class="Main__categorys">
-          <li class="Main__category">
-            <ul class="Main__works"><a class="Main__work Main__web--1" href="https://mo-ro.github.io/hanabi/" target="_blank">
-                <div class="Main__explain">
-                  <div class="Main__worktitle">Font Animations</div>
-                  <div class="Main__workcontent">HTML, CSS, illustrator</div>
-                </div></a><a class="Main__work Main__web--2" href="https://mo-ro.github.io/font.animation/" target="_blank">
-                <div class="Main__explain">
-                  <div class="Main__worktitle">花火</div>
-                  <div class="Main__workcontent">HTML, CSS, jQuery, TweenMax, illustrator</div>
-                </div></a><a class="Main__work Main__web--3" href="https://mo-ro.github.io/svgtest/" target="_blank">
-                <div class="Main__explain">
-                  <div class="Main__worktitle">Scroll Animation</div>
-                  <div class="Main__workcontent">HTML, CSS, jQuery, illustrator</div>
-                </div></a></ul>
-          </li>
-          <li class="Main__category">
-            <ul class="Main__works">
-              <li class="Main__work Main__design"><img src="../img/work/cd.png"></li>
-              <li class="Main__work Main__design"><img src="../img/work/hare.png"></li>
-              <li class="Main__work Main__design"><img src="../img/work/lump.png"></li>
-              <li class="Main__work Main__design"><img src="../img/work/moray.png"></li>
-              <li class="Main__work Main__design"><img src="../img/work/mron.png"></li>
-              <li class="Main__work Main__design"><img src="../img/work/only.png"></li>
-              <li class="Main__work Main__design"><img src="../img/work/realize.png"></li>
-              <li class="Main__work Main__design"><img src="../img/work/reha.png"></li>
-              <li class="Main__work Main__design"><img src="../img/work/sae.png"></li>
-              <li class="Main__work Main__design"><img src="../img/work/soutei.png"></li>
-              <li class="Main__work Main__design"><img src="../img/work/vanilla.png"></li>
-            </ul>
-          </li>
-          <li class="Main__category">
-            <ul class="Main__works"><a class="Main__work Main__system--1" href="https://unityroom.com/games/spring_chick" target="_blank">
-                <div class="Main__explain">
-                  <div class="Main__worktitle">SPRING CHICK</div>
-                  <div class="Main__workcontent">C#, Unity</div>
-                </div></a></ul>
-          </li>
-        </ul>
-      </div>
-    </div><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </div><?php
+   
+          $args = array( 'posts_per_page' => 5, 'order'=> 'DESC', 'orderby' => 'date' );
+          $posts = get_posts($args);
+   
+          foreach ($posts as $p) :
+   
+          ?>
+              <div class="date"><?php echo mysql2date( 'Y/m/d', $p->post_date ) ?></div>
+              <div class="text"><?php echo $p->post_title; ?></div>
+          <?php endforeach; ?>
+</ul><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
-<script src ="js/shards.js"></script><script src="js/works.js"></script>
+<script src ="js/shards.js"></script><script src="js/blog.js"></script>
   </body>
 </html>
